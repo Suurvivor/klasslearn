@@ -12,14 +12,17 @@ ProductReview::~ProductReview(){
 }
 
 void ProductReview::displayDetails() const {
+    cout << "Posted on: " << Review::timestamp << endl;
+    cout << "last social activbity: " << social.getTimeStamp() << endl;
     Review::displayDetails();
     cout << "Product: " << productId << endl;
     cout << "Category: " << category << endl; 
+    social.displaySocialStats();
 }
 
 void ProductReview::setProductId(const string &id){
     productId = Review::validateAndTrim(id, MAX_PRODUCTID_LENGTH, "Product id");
 }
 void ProductReview::setCategory(const string &cat){
-    productId = Review::validateAndTrim(cat, MAX_CATEGORY_LENGTH, "Product category");
+    category = Review::validateAndTrim(cat, MAX_CATEGORY_LENGTH, "Product category");
 }

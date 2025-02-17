@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Review::Review(unsigned int r, const string& t, const string& txt){
+Review::Review(unsigned int r, const string& t, const string& txt) : timestamp(time(nullptr)){
     setRating(r);
     setTtitle(t);
     setText(txt);

@@ -2,7 +2,7 @@
 #define REVIEW_H
 
 #include <iostream>
-
+#include <ctime>
 using namespace std;
 
 class Review{
@@ -20,6 +20,7 @@ class Review{
 
     protected:
         string validateAndTrim(const string& str, unsigned int maxlength, const string& fieldName) const;
+        time_t timestamp;
     private:
         friend class Reviewbot;
         static const unsigned int MIN_RATING = 1;
