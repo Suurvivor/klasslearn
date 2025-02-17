@@ -13,7 +13,7 @@ class Warrior: public Character{
         Warrior(const string &name, int health, int strength);
         void attack() const; // todo override to ioncluide str bonus
         void displayStatus() const; // todo override to show str and eq
-        void addItem(const string &item) {equipment.addItem(item);}
+        void addItem(const string &item);
 
     private:
         int strength;
